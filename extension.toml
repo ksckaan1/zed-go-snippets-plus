@@ -1,0 +1,8 @@
+id = "go-snippets-plus"
+name = "Go Snippets Plus"
+version = "0.0.1"
+schema_version = 1
+authors = ["Kaan Kuscu <me@kaanksc.com>"]
+description = "Go snippets for Zed IDE. Similar to the original Go snippets, but with additional features."
+repository = "https://github.com/ksckaan1/zed-go-snippets-plus"
+snippets = "./snippets/go.json"
