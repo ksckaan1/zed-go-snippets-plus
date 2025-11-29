@@ -1,143 +1,134 @@
-# Go Snippets for Zed IDE
+# Go Snippets Plus for Zed IDE
 
-A collection of Go snippets for the [Zed IDE](https://zed.dev) to improve your development speed and productivity.
+![Version](https://img.shields.io/github/v/release/ksckaan1/zed-go-snippets-plus?style=flat-square)
+![License](https://img.shields.io/github/license/ksckaan1/zed-go-snippets-plus?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-Zed-blue?style=flat-square)
 
-## Features
+A comprehensive collection of Go snippets for the [Zed IDE](https://zed.dev), designed to match the familiarity and productivity of standard VS Code Go snippets.
 
-This extension provides a comprehensive set of snippets for Go development, including:
+🚀 **Boost your productivity with shortcuts for common patterns like `if err != nil`, loops, HTTP handlers, and testing structures.**
 
-- Package and import declarations
-- Control structures (if, for, switch)
-- Function and method declarations
-- Common Go patterns
-- HTTP server code
-- Testing helpers
-- And much more!
+## ✨ Features
 
-## Installation
+- **VS Code Familiarity:** Uses the same prefixes you are used to (`iferr`, `forr`, `tyf`, etc.).
+- **Comprehensive:** Covers everything from basic syntax to concurrency and HTTP.
+- **Productivity Focused:** Includes complex blocks like Table-Driven Tests (`tdt`) and Handler functions.
 
-### Method 1
+## 📦 Installation
 
-1. Go to Extensions menu in Zed IDE
-2. Search for "go-snippets"
-3. Click "Install"
+1. Open **Zed**.
+2. Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Linux/Windows) to open the command palette.
+3. Type `zed: extensions` and select it.
+4. Search for **"Go Snippets Plus"**.
+5. Click **Install**.
 
-### Method 2
-1. Clone this repo:
-```
-git clone https://github.com/ayberkgezer/go-zed-snippets.git
-```
-2. Go to Extensions menu in Zed IDE
-3. Click "Install Dev Extension"
-4. Select the folder you cloned
+## 📝 Snippets Reference
 
-## Usage
-
-Start typing the snippet prefix (e.g., `go-func`) in a Go file and press `Tab` to expand the snippet.
-
-## Available Snippets
-
+### Essentials & Declarations
 | Prefix | Description |
 |--------|-------------|
-| `go-im` | Single import statement |
-| `go-ims` | Multiple import block |
-| `go-co` | Single constant |
-| `go-cos` | Multiple constants block |
-| `go-tyf` | Type function declaration |
-| `go-tyi` | Type interface declaration |
-| `go-tys` | Type struct declaration |
-| `go-pkgm` | Package main with main function |
-| `go-func` | Function declaration |
-| `go-var` | Single variable declaration |
-| `go-vars` | Multiple variables block |
-| `go-switch` | Switch statement |
-| `go-sel` | Select statement |
-| `go-cs` | Case clause |
-| `go-for` | For loop |
-| `go-forr` | For range loop |
-| `go-ch` | Channel declaration |
-| `go-map` | Map declaration |
-| `go-in` | Empty interface |
-| `go-if` | If statement |
-| `go-el` | Else branch |
-| `go-ie` | If-else statement |
-| `go-iferr` | If error check |
-| `go-fp` | fmt.Println() |
-| `go-ff` | fmt.Printf() |
-| `go-lp` | log.Println() |
-| `go-lf` | log.Printf() |
-| `go-lv` | Log variable content |
-| `go-tl` | t.Log() for tests |
-| `go-tlf` | t.Logf() for tests |
-| `go-tlv` | Log variable in tests |
-| `go-make` | make() statement |
-| `go-new` | new() statement |
-| `go-pn` | panic() |
-| `go-wr` | HTTP handler parameters |
-| `go-hf` | http.HandleFunc() |
-| `go-hand` | HTTP handler declaration |
-| `go-rd` | http.Redirect() |
-| `go-herr` | http.Error() |
-| `go-las` | http.ListenAndServe() |
-| `go-sv` | http.Serve() |
-| `go-go` | Anonymous goroutine |
-| `go-gf` | Goroutine function call |
-| `go-df` | Defer statement |
-| `go-tf` | Test function |
-| `go-tm` | TestMain function |
-| `go-bf` | Benchmark function |
-| `go-ef` | Example function |
-| `go-tdt` | Table-driven test |
-| `go-finit` | init function |
-| `go-fmain` | main function |
-| `go-meth` | Method declaration |
-| `go-helloweb` | Hello world web app |
-| `go-sort` | Sort implementation |
+| `pkgm` | Package main with main function |
+| `im` | Single import statement |
+| `ims` | Multiple import block |
+| `var` | Single variable declaration |
+| `vars` | Multiple variables block |
+| `co` | Single constant |
+| `cos` | Multiple constants block |
+| `make` | make() statement |
+| `new` | new() statement |
 
-## Examples
+### Types & Functions
+| Prefix | Description |
+|--------|-------------|
+| `tyf` | Type function declaration |
+| `tyi` | Type interface declaration |
+| `tys` | Type struct declaration |
+| `func` | Function declaration |
+| `meth` | Method declaration |
+| `in` | Empty interface `interface{}` |
+| `map` | Map declaration |
+| `finit` | init function |
+| `fmain` | main function |
 
-### Function declaration
-Type `go-func` and press Tab:
-```go
-func name(param type) returnType {
-    // Your code here
-}
-```
+### Control Flow & Error Handling
+| Prefix | Description |
+|--------|-------------|
+| `if` | If statement |
+| `el` | Else branch |
+| `ie` | If-else statement |
+| `iferr` | **If error check** (`if err != nil { ... }`) |
+| `switch` | Switch statement |
+| `sel` | Select statement |
+| `cs` | Case clause |
+| `for` | For loop |
+| `forr` | For range loop |
+| `pn` | panic() |
+| `df` | Defer statement |
 
-### If error check
-Type `go-iferr` and press Tab:
-```go
-if err != nil {
-    return nil, err
-}
-```
+### Concurrency
+| Prefix | Description |
+|--------|-------------|
+| `go` | Anonymous goroutine |
+| `gf` | Goroutine function call |
+| `ch` | Channel declaration |
 
-### HTTP handler
-Type `go-hand` and press Tab:
-```go
-func handlerName(w http.ResponseWriter, r *http.Request) {
-    // Your code here
-}
-```
+### Logging & Formatting
+| Prefix | Description |
+|--------|-------------|
+| `fp` | fmt.Println() |
+| `ff` | fmt.Printf() |
+| `lp` | log.Println() |
+| `lf` | log.Printf() |
+| `lv` | Log variable content |
 
-## Contributing
+### HTTP / Web
+| Prefix | Description |
+|--------|-------------|
+| `helloweb`| complete Hello World web app |
+| `hand` | HTTP handler declaration |
+| `hf` | http.HandleFunc() |
+| `wr` | HTTP handler parameters (`w http.ResponseWriter, r *http.Request`) |
+| `rd` | http.Redirect() |
+| `herr` | http.Error() |
+| `las` | http.ListenAndServe() |
+| `sv` | http.Serve() |
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+### Testing
+| Prefix | Description |
+|--------|-------------|
+| `tf` | Test function |
+| `tm` | TestMain function |
+| `tdt` | **Table-driven test** boilerplate |
+| `bf` | Benchmark function |
+| `ef` | Example function |
+| `tl` | t.Log() |
+| `tlf` | t.Logf() |
+| `tlv` | Log variable in tests |
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### Utils
+| Prefix | Description |
+|--------|-------------|
+| `sort` | Sort implementation |
 
-## License
+## 🤝 Contributing
+
+Contributions are welcome! If you feel a snippet is missing or could be improved:
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/amazing-snippet`).
+3. Commit your changes.
+4. Open a Pull Request.
+
+## 📄 License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
-## Author
+## 👨‍💻 Author
 
-Ayberk Gezer - [ayberkgezer@outlook.com](mailto:ayberkgezer@outlook.com)
+**Kaan Kuscu**
+- Email: [me@kaanksc.com](mailto:me@kaanksc.com)
+- GitHub: [@ksckaan1](https://github.com/ksckaan1)
 
-## Repository
+## 🔗 Repository
 
-[https://github.com/ayberkgezer/go-zed-snippets](https://github.com/ayberkgezer/go-zed-snippets)
+[https://github.com/ksckaan1/zed-go-snippets-plus](https://github.com/ksckaan1/zed-go-snippets-plus)
