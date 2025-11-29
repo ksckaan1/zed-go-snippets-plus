@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/github/v/release/ksckaan1/zed-go-snippets-plus?style=flat-square)
 ![License](https://img.shields.io/github/license/ksckaan1/zed-go-snippets-plus?style=flat-square)
-![Platform](https://img.shields.io/badge/platform-Zed-blue?style=flat-square)
+[![Zed](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zed-industries/zed/main/assets/badge/v0.json)](https://zed.dev)
 
 A comprehensive collection of Go snippets for the [Zed IDE](https://zed.dev), designed to match the familiarity and productivity of standard VS Code Go snippets.
 
